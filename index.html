@@ -40,27 +40,22 @@
         .logo {
             width: 2cm;
             height: 2cm;
+            cursor: pointer;
         }
     </style>
-    <script async src="https://tally.so/widgets/embed.js"></script>
 </head>
 <body>
     <div class="container">
-        <img src="https://storage.googleapis.com/tally-block-assets/25276d37-11d1-4b10-989f-d6b6708e3a0a/facebook_profile_image.png" alt="Logo Zen-Host" class="logo">
+        <img src="https://storage.googleapis.com/tally-block-assets/25276d37-11d1-4b10-989f-d6b6708e3a0a/facebook_profile_image.png" alt="Logo Zen-Host" class="logo" onclick="goToPopupPage()">
         <h1>Zen-Host</h1>
         <p>Bienvenue chez Zen-Host, votre solution complète pour la gestion de vos propriétés sur les plateformes de location de courte durée telles qu'Airbnb, OfficeRiders et Abritel.</p>
         <p>Nous sommes une équipe dévouée de professionnels de la conciergerie qui se consacrent à gérer efficacement et avec soin les propriétés de nos clients particuliers.</p>
         
-        <button class="button" onclick="openTallyPopup()">Demande de devis</button>
+        <button class="button" onclick="goToPopupPage()">Demande de devis</button>
 
         <script>
-            function openTallyPopup() {
-                Tally({
-                    popupURL: "https://tally.so",
-                    tallyId: "w4BOEr",
-                    emoji: "👋",
-                    emojiAnimation: "wave"
-                }).open();
+            function goToPopupPage() {
+                window.location.href = "popup.html";
             }
         </script>
     </div>
